@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package task;
+
+service TaskService {
+    rpc SubmitTask (TaskRequest) returns (TaskResponse);
+    rpc SubmitTaskNoWait(TaskRequest) returns (goole.protobuf.Empty);
+}
+
+message TaskSubmitRequest {
+    string task_id = 1;
+    uint32 task_type = 2;
+    map<string, vector<byte>> task_extra_info = 3;
+}
+
+
+message TaskSubmitResponse {
+    int32 task_status = 1;
+    string task_result = 2;
+}
