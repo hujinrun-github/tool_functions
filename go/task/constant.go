@@ -1,0 +1,17 @@
+package task
+
+const (
+	DEFAULT_BUFFER_SIZE = 10
+	DEFAULT_POOL_SIZE   = 100
+	DEFAULT_SEVER_PORT  = 9008
+)
+
+const (
+	TYPE_UNKNOWN TASKTYPE_T = iota
+)
+
+const (
+	RET_OK TASKRET_T = 0
+
+	RET_CANNOT_GET_TASK_HANDLE = -(iota + 1)
+)

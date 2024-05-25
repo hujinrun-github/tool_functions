@@ -1,9 +1,6 @@
 package task
 
 type IDTYPE uint64
-type TASKTYPE uint32
-
-const (
-	TYPE_UNKNOWN TASKTYPE = iota
-	
-)
+type TASKTYPE_T uint32
+type TASKRET_T int32
+type TASKID_T string

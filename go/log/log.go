@@ -140,6 +140,14 @@ func (l *Logger) Error(message ...string) {
 	l.Write(LEVEL_ERROR, message...)
 }
 
+func (l *Logger) Errorf(format string, v ...interface{}) {
+	if l.level > LEVEL_ERROR {
+		return
+	}
+	str := fmt.Sprintf(format, v...)
+	l.Write(LEVEL_ERROR, str)
+}
+
 func (l *Logger) Fatal(message ...string) {
 	log.Fatal(message)
 }
